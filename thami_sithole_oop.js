@@ -121,4 +121,9 @@ calculateDeliveryFees() {
   }
   return totalFees;
 }
+  
+// Calculate final order total
+calculateFinalTotal() {
+  return this.calculateFoodTotal() + this.calculateDeliveryFees();
+}  
 }
