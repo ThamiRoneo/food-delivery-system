@@ -102,5 +102,14 @@ removeItem(foodItem) {
       break;
     }
   }
+}
+  
+// Calculate total cost of food items
+calculateFoodTotal() {
+  let total = 0;
+  for (let i = 0; i < this.items.length; i++) {
+    total += this.items[i].getPrice();
+  }
+  return total;
 }  
 }
