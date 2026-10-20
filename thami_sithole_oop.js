@@ -65,3 +65,20 @@ getDeliveryFee() {
 }
 }
 
+// Drink subclass
+class Drink extends FoodItem {
+constructor(name, price, sizeInMl) {
+  super(name, price);
+  this.sizeInMl = sizeInMl;
+}
+
+getFoodType() {
+  return 'Drink';
+}
+
+// Override delivery fee for Drink (polymorphism)
+getDeliveryFee() {
+  return 5;
+}
+}
+
