@@ -20,4 +20,14 @@ class FoodItem {
     }
   }
 
-  
+// Calculate delivery fee - to be overridden by subclasses (abstraction + polymorphism)
+getDeliveryFee() {
+  return 0;
+}
+
+// Get food type - to be overridden by subclasses
+getFoodType() {
+  return 'FoodItem';
+}
+}
+
