@@ -162,3 +162,76 @@ getDeliveryFee() {
   return 10;
 }
 }
+
+// Testing functionality
+function runTests() {
+console.log('=== Testing Food Delivery System ===\n');
+
+// Test food item creation
+const pizza = new Pizza('Margherita', 85.5, 'Large');
+const burger = new Burger('Cheese Burger', 55, 2);
+const drink = new Drink('Coke', 25, 500);
+const sandwich = new Sandwich('Chicken Mayo', 45, 'Whole Wheat');
+
+console.log('1. Food items created:');
+console.log('   -', pizza.getFoodType(), ':', pizza.name, '(Size:', pizza.size + ')');
+console.log('   -', burger.getFoodType(), ':', burger.name, '(Patties:', burger.pattyCount + ')');
+console.log('   -', drink.getFoodType(), ':', drink.name, '(Size:', drink.sizeInMl + 'ml)');
+console.log('   -', sandwich.getFoodType(), ':', sandwich.name, '(Bread:', sandwich.breadType + ')');
+console.log('');
+
+// Test accessing food item information
+console.log('2. Food item information accessed:');
+console.log('   Pizza price:', pizza.getPrice());
+console.log('   Burger price:', burger.getPrice());
+console.log('   Drink price:', drink.getPrice());
+console.log('   Sandwich price:', sandwich.getPrice());
+console.log('');
+
+// Test invalid price handling
+console.log('3. Invalid prices handled:');
+const invalidItem = new FoodItem('Invalid', -50);
+console.log('   Price set to -50:', invalidItem.getPrice());
+const invalidItem2 = new FoodItem('Invalid2', 'abc');
+console.log('   Price set to "abc":', invalidItem2.getPrice());
+console.log('');
+
+// Test different food types produce different delivery fees
+console.log('4. Delivery fees (polymorphism):');
+console.log('   Pizza delivery fee:', pizza.getDeliveryFee());
+console.log('   Burger delivery fee:', burger.getDeliveryFee());
+console.log('   Drink delivery fee:', drink.getDeliveryFee());
+console.log('   Sandwich delivery fee:', sandwich.getDeliveryFee());
+console.log('   Different fees demonstrate polymorphism');
+console.log('');
+
+// Create order and add items
+const order = new Order();
+order.addItem(pizza);
+order.addItem(burger);
+order.addItem(drink);
+console.log('5. Items added to order:');
+console.log('   Order has', order.getItems().length, 'items');
+console.log('');
+
+// Test removing item
+order.removeItem(drink);
+console.log('6. Item removed from order:');
+console.log('   Order has', order.getItems().length, 'items after removal');
+order.addItem(drink); // add back for total calculation
+console.log('');
+
+// Test calculations
+console.log('7. Calculations:');
+console.log('   Food total:', order.calculateFoodTotal());
+console.log('   Delivery fees:', order.calculateDeliveryFees());
+console.log('   Final total:', order.calculateFinalTotal());
+console.log('');
+
+// Test order summary display
+console.log('8. Order Summary:');
+order.displaySummary();
+}
+
+// Run tests
+runTests();
