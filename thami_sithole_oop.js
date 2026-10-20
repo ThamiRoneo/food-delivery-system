@@ -145,3 +145,20 @@ displaySummary() {
   console.log(`TOTAL ${padEnd(23)} ${padEnd(10)} R ${this.calculateFinalTotal().toFixed(2)}`);
 }
 }
+
+// Additional food type to demonstrate inheritance further (Sandwich)
+class Sandwich extends FoodItem {
+constructor(name, price, breadType) {
+  super(name, price);
+  this.breadType = breadType;
+}
+
+getFoodType() {
+  return 'Sandwich';
+}
+
+// Override delivery fee for Sandwich (polymorphism)
+getDeliveryFee() {
+  return 10;
+}
+}
