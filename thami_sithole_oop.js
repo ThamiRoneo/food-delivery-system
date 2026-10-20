@@ -182,10 +182,10 @@ console.log('');
 
 // Test accessing food item information
 console.log('2. Food item information accessed:');
-console.log('   Pizza price:', pizza.getPrice());
-console.log('   Burger price:', burger.getPrice());
-console.log('   Drink price:', drink.getPrice());
-console.log('   Sandwich price:', sandwich.getPrice());
+console.log('   Pizza price: R', pizza.getPrice().toFixed(2));
+console.log('   Burger price: R', burger.getPrice().toFixed(2));
+console.log('   Drink price: R', drink.getPrice().toFixed(2));
+console.log('   Sandwich price: R', sandwich.getPrice().toFixed(2));
 console.log('');
 
 // Test invalid price handling
@@ -198,10 +198,10 @@ console.log('');
 
 // Test different food types produce different delivery fees
 console.log('4. Delivery fees (polymorphism):');
-console.log('   Pizza delivery fee:', pizza.getDeliveryFee());
-console.log('   Burger delivery fee:', burger.getDeliveryFee());
-console.log('   Drink delivery fee:', drink.getDeliveryFee());
-console.log('   Sandwich delivery fee:', sandwich.getDeliveryFee());
+console.log('   Pizza delivery fee: R', pizza.getDeliveryFee().toFixed(2));
+console.log('   Burger delivery fee: R', burger.getDeliveryFee().toFixed(2));
+console.log('   Drink delivery fee: R', drink.getDeliveryFee().toFixed(2));
+console.log('   Sandwich delivery fee: R', sandwich.getDeliveryFee().toFixed(2));
 console.log('   Different fees demonstrate polymorphism');
 console.log('');
 
@@ -223,9 +223,9 @@ console.log('');
 
 // Test calculations
 console.log('7. Calculations:');
-console.log('   Food total:', order.calculateFoodTotal());
-console.log('   Delivery fees:', order.calculateDeliveryFees());
-console.log('   Final total:', order.calculateFinalTotal());
+console.log('   Food total: R', order.calculateFoodTotal().toFixed(2));
+console.log('   Delivery fees: R', order.calculateDeliveryFees().toFixed(2));
+console.log('   Final total: R', order.calculateFinalTotal().toFixed(2));
 console.log('');
 
 // Test order summary display
