@@ -14,7 +14,7 @@ class FoodItem {
   // Set price with validation
   setPrice(price) {
     if (typeof price !== 'number' || isNaN(price) || price < 0) {
-      this.#price = 0; 
+      this.#price = 0;
     } else {
       this.#price = price;
     }
@@ -103,7 +103,7 @@ removeItem(foodItem) {
     }
   }
 }
-  
+
 // Calculate total cost of food items
 calculateFoodTotal() {
   let total = 0;
@@ -121,7 +121,7 @@ calculateDeliveryFees() {
   }
   return totalFees;
 }
-  
+
 // Calculate final order total
 calculateFinalTotal() {
   return this.calculateFoodTotal() + this.calculateDeliveryFees();
@@ -130,5 +130,18 @@ calculateFinalTotal() {
 // Get all items
 getItems() {
   return this.items;
+}
+
+// Display order summary
+displaySummary() {
+  console.log('Food Delivery Order    Price     Delivery Fee');
+  for (let i = 0; i < this.items.length; i++) {
+    const item = this.items[i];
+    const name = `${item.getFoodType()} (' ${item.name} ')`;
+    const price = `R ${item.getPrice().toFixed(2)}`;
+    const fee = `R ${item.getDeliveryFee().toFixed(2)}`;
+    console.log(`${name.padEnd(23)} R ${price.padEnd(11)} R ${fee}`);
+  }
+  console.log(`TOTAL ${padEnd(23)} ${padEnd(10)} R ${this.calculateFinalTotal().toFixed(2)}`);
 }
 }
