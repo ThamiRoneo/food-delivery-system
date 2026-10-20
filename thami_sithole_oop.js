@@ -111,5 +111,14 @@ calculateFoodTotal() {
     total += this.items[i].getPrice();
   }
   return total;
-}  
+}
+
+// Calculate total delivery fees
+calculateDeliveryFees() {
+  let totalFees = 0;
+  for (let i = 0; i < this.items.length; i++) {
+    totalFees += this.items[i].getDeliveryFee();
+  }
+  return totalFees;
+}
 }
