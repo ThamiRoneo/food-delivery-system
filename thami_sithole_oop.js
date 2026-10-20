@@ -93,4 +93,14 @@ addItem(foodItem) {
     this.items.push(foodItem);
   }
 }
+
+// Remove food item from order (if it exists)
+removeItem(foodItem) {
+  for (let i = 0; i < this.items.length; i++) {
+    if (this.items[i] === foodItem) {
+      this.items.splice(i, 1);
+      break;
+    }
+  }
+}  
 }
