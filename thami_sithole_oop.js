@@ -125,5 +125,10 @@ calculateDeliveryFees() {
 // Calculate final order total
 calculateFinalTotal() {
   return this.calculateFoodTotal() + this.calculateDeliveryFees();
-}  
+}
+
+// Get all items
+getItems() {
+  return this.items;
+}
 }
