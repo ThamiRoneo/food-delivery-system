@@ -134,15 +134,15 @@ getItems() {
 
 // Display order summary
 displaySummary() {
-  console.log('Food Delivery Order    Price     Delivery Fee');
+  console.log('Food Delivery Order             Price     Delivery Fee');
   for (let i = 0; i < this.items.length; i++) {
     const item = this.items[i];
     const name = `${item.getFoodType()} (' ${item.name} ')`;
     const price = `R ${item.getPrice().toFixed(2)}`;
     const fee = `R ${item.getDeliveryFee().toFixed(2)}`;
-    console.log(`${name.padEnd(23)} R ${price.padEnd(11)} R ${fee}`);
+    console.log(`${name.padEnd(30)} ${price.padEnd(11)} ${fee}`);
   }
-  console.log(`TOTAL ${padEnd(23)} ${padEnd(10)} R ${this.calculateFinalTotal().toFixed(2)}`);
+  console.log(`TOTAL                                      R ${this.calculateFinalTotal().toFixed(2).padStart(1)}`);
 }
 }
 
