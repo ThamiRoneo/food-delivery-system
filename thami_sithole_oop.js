@@ -31,3 +31,20 @@ getFoodType() {
 }
 }
 
+// Pizza subclass
+class Pizza extends FoodItem {
+constructor(name, price, size) {
+  super(name, price);
+  this.size = size;
+}
+
+getFoodType() {
+  return 'Pizza';
+}
+
+// Override delivery fee for Pizza (polymorphism)
+getDeliveryFee() {
+  return 25;
+}
+}
+
