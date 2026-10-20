@@ -137,7 +137,7 @@ displaySummary() {
   console.log('Food Delivery Order             Price     Delivery Fee');
   for (let i = 0; i < this.items.length; i++) {
     const item = this.items[i];
-    const name = `${item.getFoodType()} (' ${item.name} ')`;
+    const name = `${item.getFoodType()} ('${item.name}')`;
     const price = `R ${item.getPrice().toFixed(2)}`;
     const fee = `R ${item.getDeliveryFee().toFixed(2)}`;
     console.log(`${name.padEnd(30)} ${price.padEnd(11)} ${fee}`);
