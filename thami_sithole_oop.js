@@ -48,3 +48,20 @@ getDeliveryFee() {
 }
 }
 
+// Burger subclass
+class Burger extends FoodItem {
+constructor(name, price, pattyCount) {
+  super(name, price);
+  this.pattyCount = pattyCount;
+}
+
+getFoodType() {
+  return 'Burger';
+}
+
+// Override delivery fee for Burger (polymorphism)
+getDeliveryFee() {
+  return 15;
+}
+}
+
