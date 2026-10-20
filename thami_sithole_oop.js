@@ -82,3 +82,15 @@ getDeliveryFee() {
 }
 }
 
+class Order {
+constructor() {
+  this.items = [];
+}
+
+// Add food item to order
+addItem(foodItem) {
+  if (foodItem instanceof FoodItem) {
+    this.items.push(foodItem);
+  }
+}
+}
