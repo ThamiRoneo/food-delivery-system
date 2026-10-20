@@ -84,10 +84,10 @@ order.displaySummary();
 
 ```
 Food Delivery Order    Price     Delivery Fee
-Pizza (Margherita)     R 85.50    R 25.00
-Burger (Cheese Burger) R 55.00    R 15.00
-Drink (Coke)           R 25.00    R 5.00
-TOTAL                                  R 210.50
+Pizza (Margherita)     R 85.50    R  25.00
+Burger (Cheese Burger) R 55.00    R  15.00
+Drink (Coke)           R 25.00    R   5.00
+TOTAL                             R 210.50
 ```
 
 ## Testing
